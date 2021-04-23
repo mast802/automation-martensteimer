@@ -24,6 +24,7 @@ describe('Virtual regression test using page objects', function(){
     it("Edit single room", function(){
         cy.percySnapshot('login')
         indexFunctions.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview')
+        cy.contains('Reservations')
         cy.percySnapshot('dashbord')
         dashbordFunctions.veiwRooms(cy,'Rooms')
         cy.percySnapshot('view_rooms')

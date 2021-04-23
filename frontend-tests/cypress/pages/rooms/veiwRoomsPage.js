@@ -36,6 +36,7 @@ function assertLastElementRoomPrice(cy, contentToComfirm){
 function editLastRoom(cy){
     cy.get(menuLastRoom).click()
     cy.get(menuEditLastRoom).click()
+    cy.contains('Features')
 }
 
 
