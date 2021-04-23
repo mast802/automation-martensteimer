@@ -4,14 +4,21 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^7.1.0"
+    "cypress": "^7.1.0",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "cypress:open":"cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --reporter mochawesome --spec 'cypress/integration/test-suite-with pageObjects.spec.js'",
+    "test:vrt": "percy exec cypress run --spec 'cypress/integration/visual-regression-test.spec.js'"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cli": "^1.0.0-beta.48",
+    "@percy/cypress": "^3.1.0"
+  }
 }

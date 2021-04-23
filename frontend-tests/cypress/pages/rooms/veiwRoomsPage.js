@@ -11,9 +11,6 @@ const menuEditLastRoom = ':nth-last-child(1) > .menu > :nth-child(1)'
 
 
 
-
-
-
 //Actions/methods
 
 function backToDashboard(cy, contentToComfirm){
